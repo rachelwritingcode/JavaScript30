@@ -44,23 +44,17 @@ btn.addEventListener('click', () => {
 [Reference](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events)
 
 ---
-### JavaScript ES6 For Loop
+### Array Object
+Array Object - forEach
 
-Instead of this
-```
-for (var index = 0; index < myArray.length; index++) {
-  console.log(myArray[index]);
-}
-```
-
-Use this
-```
-myArray.forEach(function (value) {
-  console.log(value);
-});
+forEach() method executes a provided function once for each array element.
+In the example, for each key pressed, the event listener function will run when the key press event is fired.
 
 ```
-[Reference](https://hacks.mozilla.org/2015/04/es6-in-depth-iterators-and-the-for-of-loop/)
+const keys = Array.from(document.querySelectorAll('.key'));
+keys.forEach(key => key.addEventListener('transitionend', removeTransition))
+window.addEventListener('keydown', playSound);
+```
 
 ---
 ### HTML Transition End Event

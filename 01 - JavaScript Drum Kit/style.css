@@ -34,8 +34,8 @@ body,html {
 
 .playing {
   transform: scale(1.1);
-  border-color: #ffc600;
-  box-shadow: 0 0 1rem #ffc600;
+  border-color: #0ef3f3;
+  box-shadow: 0 0 1rem #0ef3f3;
 }
 
 kbd {
@@ -44,8 +44,8 @@ kbd {
 }
 
 .sound {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   text-transform: uppercase;
   letter-spacing: .1rem;
-  color: #ffc600;
+  color: #1be64e;
 }
