@@ -6,95 +6,104 @@
 </head>
 <body>
 
+    <div class="content">
+        <div class="clock">
+            <div class="clock-face">
+                <div class="hand hour-hand"></div>
+                <div class="hand min-hand"></div>
+                <div class="hand second-hand"></div>
+            </div>
+        </div>
 
-  <div class="wrapper">
-    <div class="clock">
-      <div class="clock-face">
-        <div class="hand hour-hand"></div>
-        <div class="hand min-hand"></div>
-        <div class="hand second-hand"></div>
-      </div>
+        <div class="poem">
+          <p>"And tulips, children love to stretch,</p>
+          <p>their fingers down, to feel in each,
+          <p>its beauty’s secret nearer."</p>
+          <p id="author"> - Elizabeth Browning</p>
+        </div>
     </div>
-  </div>
-
-
-  <div class="poem">
-
-    <p>"And tulips, children love to stretch,</p>
-    <p>their fingers down, to feel in each,
-    <p>its beauty’s secret nearer."</p>
-    <p id="author"> - Elizabeth Browning</p>
-
-  </div>
-
 
   <style>
-    html {
-      background: #ed0183 url(https://images.unsplash.com/photo-1520763185298-1b434c919102?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80);
-      font-family: 'helvetica neue';
-      text-align: center;
-      font-size: 10px;
-    }
 
-    body {
-      margin: 0;
-      font-size: 2rem;
-      display: flex;
-      flex: 1;
-      min-height: 100vh;
-      align-items: center;
-    }
+  html {
+    background: #ed0183 url(https://images.unsplash.com/photo-1520763185298-1b434c919102?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80);
+    font-family: 'helvetica neue';
+    text-align: center;
+    font-size: 10px;
+  }
 
+  body {
+    margin: 0;
+    font-size: 2rem;
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+    align-items: center;
+  }
 
+  .clock {
+    background: rgb(233, 224, 230);
+    width: 30rem;
+    height: 30rem;
+    border: 10px solid rgb(7, 7, 7);
+    border-radius: 50%;
+    margin: 50px auto;
+    position: relative;
+    padding: 2rem;
+    box-shadow:
+      0 0 0 4px rgba(0,0,0,0.1),
+      inset 0 0 0 3px #EFEFEF,
+      inset 0 0 10px black,
+      0 0 10px rgba(0,0,0,0.2);
+  }
 
-    .clock {
-      width: 30rem;
-      height: 30rem;
-      border: 20px solid white;
-      border-radius: 50%;
-      margin: 50px auto;
-      position: relative;
-      padding: 2rem;
-      box-shadow:
-        0 0 0 4px rgba(0,0,0,0.1),
-        inset 0 0 0 3px #EFEFEF,
-        inset 0 0 10px black,
-        0 0 10px rgba(0,0,0,0.2);
-    }
+  .clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px); /* account for the height of the clock hands */
+  }
 
-    .clock-face {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      transform: translateY(-3px); /* account for the height of the clock hands */
-    }
+  .hand {
+    width: 50%;
+    height: 6px;
+    border: 1px solid black;
+    background: white;
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+  }
+  .second-hand{
+    background: goldenrod;
+  }
 
-    .hand {
-      width: 50%;
-      height: 6px;
-      background: white;
-      position: absolute;
-      top: 50%;
-      transform-origin: 100%;
-      transform: rotate(90deg);
-      transition: all 0.05s;
-      transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+  .poem{
+    background-color: rgb(233, 224, 230);
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    font-style: italic;
+    font-size: 20px;
+  }
+  #author{
+    font-weight: bold;
+  }
+
+  @media only screen and (min-width: 600px) {
+    .content{
+      padding-left: 300px;
     }
-    .second-hand{
-      background: goldenrod;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    .content{
+      padding-left: 800px;
     }
-    .wrapper{
-      padding-left: 80rem;
-    }
-    .poem{
-      padding-left: 140px;
-      padding-top: 60px;
-      font-style: italic;
-      font-size: 30px;
-    }
-    #author{
-      font-weight: bold;
-    }
+  }
+
 
   </style>
 
